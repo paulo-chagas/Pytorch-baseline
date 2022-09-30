@@ -1,0 +1,30 @@
+
+{
+    "exp": {
+        "name": "wideresnet",
+        "description": "default"
+    },
+    "dataloader": {
+        "image_size": 224,
+        "augmentation": true,
+        "mode": "normal"
+    },
+    "model": {
+        "name": "wideresnet",
+        "dp_rate": 0.5,
+        "freeze_backbone": false,
+        "focal_loss": false,
+        "learning_rate": 0.0001,
+        "warm_up_epochs": 5,
+        "optimizer": "adamw",
+        "momentum": 0.9
+    },
+    "trainer": {
+        "name": "cv",
+        "save_lr": false,
+        "class_weight": true,
+        "K": 5,
+        "num_epochs": 100,
+        "batch_size": 32
+    }
+}

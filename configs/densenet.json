@@ -1,0 +1,29 @@
+
+{
+    "exp": {
+        "name": "densenet",
+        "description": "default"
+    },
+    "dataloader": {
+        "image_size": 224,
+        "augmentation": true,
+        "mode": "normal"
+    },
+    "model": {
+        "name": "densenet",
+        "freeze_backbone": true,
+        "focal_loss": false,
+        "learning_rate": 0.00001,
+        "warm_up_epochs": 5,
+        "optimizer": "adamw",
+        "momentum": 0.9
+    },
+    "trainer": {
+        "name": "cv",
+        "save_lr": false,
+        "class_weight": true,
+        "K": 10,
+        "num_epochs": 100,
+        "batch_size": 32
+    }
+}
