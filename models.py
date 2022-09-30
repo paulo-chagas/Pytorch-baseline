@@ -30,7 +30,7 @@ class Identity(torch.nn.Module):
 
 class Densenet(torch.nn.Module):
     """
-    Normal ResNet18
+    Normal DenseNet
     """
 
     def __init__(self, num_classes, freeze_backbone):
@@ -51,7 +51,7 @@ class Densenet(torch.nn.Module):
 
 class WideResNet(torch.nn.Module):
     """
-    Normal ResNet18
+    Normal WideResNet
     """
 
     def __init__(self, num_classes, freeze_backbone):
@@ -72,7 +72,7 @@ class WideResNet(torch.nn.Module):
 
 class WideResNet_Dp(torch.nn.Module):
     """
-    ResNet18 with dropout before the last fc layer
+    WideResNet with dropout before the last fc layer
     """
 
     def __init__(self, num_classes, freeze_backbone, dp_rate):
